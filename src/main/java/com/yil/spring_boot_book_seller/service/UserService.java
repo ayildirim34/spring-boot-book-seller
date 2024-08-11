@@ -17,7 +17,9 @@ public class UserService implements IUserService{
     @Autowired
     private IUserRepository userRepository;
 
+    @Autowired
     private PasswordEncoder passwordEncoder;
+
     @Override
     public User saveUser(User user) {
 
