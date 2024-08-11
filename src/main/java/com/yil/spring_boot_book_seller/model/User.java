@@ -2,8 +2,10 @@ package com.yil.spring_boot_book_seller.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 
 @Entity
 @Table (name="users")
@@ -31,4 +33,10 @@ public class User {
     @Column(name = "role", nullable = false)
     private Role role;
 
+    @Transient
+    private String token;
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return java.util.List.of();
+    }
 }
