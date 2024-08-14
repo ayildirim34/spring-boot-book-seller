@@ -1,0 +1,8 @@
+{
+  "name": "ayil-book-seller",
+  "buildpacks": [
+    {
+      "url" : "heroku/gradle"
+    }
+  ]
+}
